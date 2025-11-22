@@ -1,0 +1,330 @@
+/* ===================================== */
+/* ========= CORES DO TEMA DARK ======== */
+/* ===================================== */
+:root {
+    --fundo-principal: #1a1a2e; /* Azul Escuro Quase Preto */
+    --fundo-secundario: #2c394b; /* Cinza Escuro Suave */
+    --cor-texto: #e0e0e0; /* Cinza Claro */
+    --cor-destaque: #007bff; /* Azul Primário (links, headers) */
+    --cor-sucesso: #28a745; /* Verde */
+    --cor-alerta: #dc3545; /* Vermelho/Estoque */
+    --cor-botoes-secundarios: #6c757d; /* Cinza para Detalhes/Limpar */
+}
+
+/* ===================================== */
+/* ========= ESTILOS GERAIS ============ */
+/* ===================================== */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--fundo-principal); /* Fundo Escuro */
+    color: var(--cor-texto); /* Texto Claro */
+}
+
+header {
+    background-color: var(--fundo-secundario); /* Fundo do Header um pouco mais claro */
+    color: var(--cor-texto);
+    padding: 20px;
+    text-align: center;
+    border-bottom: 2px solid var(--cor-destaque);
+}
+
+header h1 {
+    color: var(--cor-texto);
+}
+
+header a {
+    color: var(--cor-texto);
+    text-decoration: none;
+    padding: 5px 10px;
+    border: 1px solid var(--cor-destaque);
+    border-radius: 5px;
+    margin-top: 10px;
+    display: inline-block;
+}
+.search-container {
+    margin-top: 15px;
+}
+
+#busca-input {
+    padding: 10px;
+    width: 80%;
+    max-width: 500px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: var(--fundo-principal); /* Input Escuro */
+    color: var(--cor-texto);
+}
+
+/* ------------------------------------- */
+/* CSS GRID PARA OS CARDS               */
+/* ------------------------------------- */
+.card-container {
+    padding: 20px;
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    gap: 20px;
+    max-width: 1200px;
+    margin: 20px auto;
+}
+
+.card {
+    background-color: var(--fundo-secundario); /* Cor do Card Escura */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Sombra mais escura */
+    padding: 20px;
+    transition: transform 0.2s;
+    border-left: 5px solid var(--cor-destaque); /* Detalhe azul */
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.7);
+}
+
+.card h2 {
+    color: var(--cor-destaque);
+    margin-top: 0;
+    font-size: 1.5em;
+}
+
+.card p {
+    color: var(--cor-texto);
+    margin-bottom: 10px;
+}
+
+.preco {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: var(--cor-sucesso); /* Verde para preço */
+}
+
+.estoque {
+    font-size: 0.9em;
+    color: var(--cor-alerta); /* Vermelho para estoque */
+}
+
+/* ------------------------------------- */
+/* ESTILOS PARA OS BOTÕES E DETALHES    */
+/* ------------------------------------- */
+.card-botoes {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+    gap: 10px;
+}
+
+.btn {
+    flex-grow: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 0.9em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-align: center;
+}
+
+.btn-comprar { background-color: var(--cor-sucesso); }
+.btn-comprar:hover { background-color: #1e7e34; } /* Verde Escuro */
+
+.btn-carrinho { background-color: var(--cor-destaque); }
+.btn-carrinho:hover { background-color: #0056b3; }
+
+.btn-detalhes {
+    background-color: var(--cor-botoes-secundarios);
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    width: 100%;
+}
+.btn-detalhes:hover { background-color: #5a6268; }
+
+.detalhes-container {
+    margin-top: 15px;
+    background-color: var(--fundo-principal); /* Fundo do Detalhe Escuro */
+    border-left: 3px solid var(--cor-botoes-secundarios);
+    padding: 10px;
+    border-radius: 4px;
+}
+.detalhes-container h4 {
+    color: var(--cor-destaque);
+}
+
+.detalhes-container ul {
+    padding-left: 20px;
+    margin: 0;
+    color: var(--cor-texto);
+}
+/* ===================================== */
+/* ========== CARRINHO DE COMPRAS ====== */
+/* ===================================== */
+#carrinho-main {
+    display: flex;
+    gap: 30px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 20px auto;
+}
+
+/* Lista de Itens do Carrinho */
+#lista-carrinho {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.carrinho-item {
+    background-color: var(--fundo-secundario); /* Item Escuro */
+    border: 1px solid #444; 
+    border-radius: 8px;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.carrinho-item h3 {
+    color: var(--cor-destaque);
+}
+
+.carrinho-item p {
+    color: var(--cor-texto);
+}
+
+/* Botão Remover */
+.btn-remover {
+    background-color: transparent; /* Fundo Transparente */
+    color: var(--cor-alerta); /* Texto Vermelho */
+    border: 1px solid var(--cor-alerta); /* Borda Vermelha */
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.btn-remover:hover {
+    background-color: var(--cor-alerta); 
+    color: white; 
+}
+
+/* Resumo do Pedido */
+.resumo-box {
+    flex: 1;
+    background-color: var(--fundo-secundario); /* Fundo do Resumo Escuro */
+    border: 1px solid #444;
+    border-radius: 8px;
+    padding: 20px;
+    height: fit-content;
+}
+
+.resumo-box h2 {
+    color: var(--cor-texto);
+    border-bottom: 2px solid var(--cor-destaque);
+    padding-bottom: 10px;
+    margin-top: 0;
+}
+
+.btn-finalizar {
+    background-color: var(--cor-sucesso);
+    color: white;
+    border-radius: 5px;
+    
+}
+
+.btn-limpar {
+    background-color: var(--cor-botoes-secundarios);
+    color: white;
+    border-radius: 5px;
+}
+
+.carrinho-vazio {
+    background-color: var(--fundo-secundario);
+    color: var(--cor-texto);
+    border: 1px dashed #444;
+}
+
+/* Estilos para Controles de Quantidade no Item do Carrinho */
+.item-controles {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.item-controles button {
+    background-color: #444; /* Botões de Quantidade Escuros */
+    border: 1px solid #666;
+    color: var(--cor-texto);
+}
+.item-controles button:hover {
+    background-color: #666;
+}
+
+.quantidade-display {
+    color: var(--cor-destaque);
+}
+
+/* ===================================== */
+/* =========== RODAPÉ E FOOTER ========= */
+/* ===================================== */
+footer {
+    background-color: var(--fundo-secundario);
+    color: var(--cor-texto);
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 30px;
+    border-top: 2px solid var(--cor-destaque);
+}
+
+/* ===================================== */
+/* ========== RESPONSIVIDADE =========== */
+/* ===================================== */
+
+@media (max-width: 768px) {
+    #carrinho-main {
+        flex-direction: column;
+    }
+    .resumo-box {
+        order: -1;
+    }
+
+    .carrinho-item {
+        flex-direction: column; 
+        align-items: flex-start;
+    }
+    
+    .item-controles {
+        margin-top: 10px;
+        width: 100%; 
+        justify-content: space-between;
+    }
+}
+
+@media (max-width: 600px) {
+    #busca-input {
+        width: 90%;
+    }
+
+    .card h2 {
+        font-size: 1.3em;
+    }
+    .btn-comprar, .btn-carrinho, .btn-detalhes {
+        font-size: 0.8em;
+        padding: 8px;
+    }
+    
+    .card-container, #carrinho-main {
+        padding: 10px;
+    }
+    footer{
+        font-size: 0.9em;
+    }
+}

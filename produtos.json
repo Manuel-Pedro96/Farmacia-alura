@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "nome": "Paracetamol 500mg",
+    "descricao": "Analgésico e antipirético, indicado para o alívio de dores leves e moderadas.",
+    "categoria": "Analgésicos",
+    "preco": 12.50,
+    "estoque": 150,
+    "detalhes": {
+      "fabricante": "Farmacêutica ABC",
+      "data_validade": "2024-11-30",
+      "dosagem": "500mg",
+      "forma_farmaceutica": "Comprimidos"
+    }
+  },
+  {
+    "id": 2,
+    "nome": "Amoxicilina 875mg",
+    "descricao": "Antibiótico de amplo espectro, usado para tratar infecções bacterianas.",
+    "categoria": "Antibióticos",
+    "preco": 45.99,
+    "estoque": 80,
+    "detalhes": {
+      "fabricante": "Farmacêutica XYZ",
+      "data_validade": "2025-12-31",
+      "dosagem": "875mg",
+      "forma_farmaceutica": "Cápsulas"
+    }
+  },
+  {
+    "id": 3,
+    "nome": "Ibuprofeno 400mg",
+    "descricao": "Anti-inflamatório não esteroidal (AINE), usado para reduzir inflamação e dor.",
+    "categoria": "Anti-inflamatórios",
+    "preco": 18.00,
+    "estoque": 200,
+    "detalhes": {
+      "fabricante": "Farmacêutica ABC",
+      "data_validade": "2024-06-30",
+      "dosagem": "400mg",
+      "forma_farmaceutica": "Cápsulas"
+    }
+  },
+  {
+    "id": 4,
+    "nome": "Vitamina C 1g",
+    "descricao": "Suplemento alimentar que auxilia no funcionamento do sistema imunológico.",
+    "categoria": "Suplementos",
+    "preco": 32.90,
+    "estoque": 120,
+    "detalhes": {
+      "fabricante": "NutriHealth",
+      "data_validade": "2026-03-15",
+      "dosagem": "1g",
+      "forma_farmaceutica": "Comprimidos efervescentes"
+    }
+  },
+  {
+    "id": 5,
+    "nome": "Loratadina 10mg",
+    "descricao": "Antihistamínico utilizado para aliviar sintomas de alergias sazonais.",
+    "categoria": "Antialérgicos",
+    "preco": 25.75,
+    "estoque": 90,
+    "detalhes": {
+      "fabricante": "Farmacêutica XYZ",
+      "data_validade": "2025-09-20",
+      "dosagem": "10mg",
+      "forma_farmaceutica": "Comprimidos"
+    }
+  }
+]

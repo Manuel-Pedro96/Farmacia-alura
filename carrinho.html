@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seu Carrinho de Compras</title>
+    <link rel="stylesheet" href="style.css"> 
+    <link rel="stylesheet" href="carrinho.css"> 
+    </head>
+<body>
+
+    <header>
+        <h1>🛒 Seu Carrinho de Compras</h1>
+        <a href="index.html" class="btn-voltar">← Voltar ao Catálogo</a>
+    </header>
+
+    <main id="carrinho-main">
+        
+        <section id="lista-carrinho" class="carrinho-grid">
+            </section>
+
+        <section id="resumo-carrinho" class="resumo-box">
+            <h2>Resumo do Pedido</h2>
+            <div id="subtotal">Subtotal: R$ 0.00</div>
+            <div id="total-itens">Total de Itens: 0</div>
+            
+            <button class="btn-finalizar" onclick="finalizarCompra()">Finalizar Compra</button>
+            <button class="btn-limpar" onclick="limparCarrinho()">Esvaziar Carrinho</button>
+        </section>
+
+    </main>
+    <footer>
+        <p>© 2025 Farmácia-MP. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="carrinho.js"></script>
+    </body>
+</html>
