@@ -207,5 +207,33 @@ function comprarAgora(produtoId) {
     salvarEstoque(); // Chamamos a nova função de salvamento do estoque
 }
 
+// --- Lógica do Botão Voltar ao Topo ---
+
+// Pega o botão
+const btnVoltarAoTopo = document.getElementById("btnVoltarAoTopo");
+
+// Quando o usuário rola a página, executa scrollFunction
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+    // Se o scroll for maior que 100px (para evitar que apareça em páginas curtas)
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        btnVoltarAoTopo.style.display = "block";
+    } else {
+        btnVoltarAoTopo.style.display = "none";
+    }
+}
+
+// Quando o usuário clica no botão, a página é rolada para o topo
+btnVoltarAoTopo.addEventListener('click', topFunction);
+
+function topFunction() {
+    // Rola suavemente para o topo (posição 0)
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth' 
+    });
+}
+
 // Inicializa a aplicação carregando os dados quando a página é aberta
 carregarDados();
