@@ -285,6 +285,33 @@ footer {
 }
 
 /* ===================================== */
+/* ========= BOTÃO VOLTAR AO TOPO ====== */
+/* ===================================== */
+#btnVoltarAoTopo {
+    display: none; /* Escondido por padrão */
+    position: fixed;
+    bottom: 70px; /* Acima do rodapé fixo */
+    right: 20px;
+    z-index: 99; 
+    border: none;
+    outline: none;
+    background-color: var(--cor-destaque); /* Azul Principal */
+    color: var(--cor-texto);
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 50%; /* Botão circular */
+    font-size: 1.2em;
+    opacity: 0.8;
+    transition: opacity 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+#btnVoltarAoTopo:hover {
+    opacity: 1;
+    background-color: #0056b3;
+}
+
+/* ===================================== */
 /* ========== RESPONSIVIDADE =========== */
 /* ===================================== */
 
